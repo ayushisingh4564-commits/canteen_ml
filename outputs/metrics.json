@@ -2,22 +2,22 @@
   "best_model": "LinearRegression",
   "model_metrics": {
     "LinearRegression": {
-      "MAE": 29.078627618473284,
-      "RMSE": 35.886500290431506,
-      "R2": 0.8224280869736023,
-      "MAPE_%": 4.404110557820414
+      "MAE": 29.078627618473373,
+      "RMSE": 35.886500290431606,
+      "R2": 0.8224280869736011,
+      "MAPE_%": 4.404110557820418
     },
     "RandomForest": {
-      "MAE": 32.69281074711178,
+      "MAE": 32.692810747111785,
       "RMSE": 40.554045763192846,
       "R2": 0.7732326981602855,
-      "MAPE_%": 5.012907341004288
+      "MAPE_%": 5.012907341004291
     },
     "GradientBoosting": {
-      "MAE": 31.846961975433555,
-      "RMSE": 39.92981828402191,
-      "R2": 0.7801599944043917,
-      "MAPE_%": 4.895498596558736
+      "MAE": 31.935902887981783,
+      "RMSE": 40.05216113341378,
+      "R2": 0.7788107743184047,
+      "MAPE_%": 4.92244324357183
     },
     "NaiveLastWeek": {
       "MAE": 69.65517241379311,
@@ -26,15 +26,15 @@
       "MAPE_%": 11.404203760272372
     }
   },
-  "residual_std": 35.86327577121619,
+  "residual_std": 35.863275771216315,
   "quantile_model": "GradientBoostingRegressor(loss='quantile')",
   "target_quantile": 0.8,
   "historical_avg_daily_waste": 110.64827586206897,
   "historical_avg_daily_shortage": 0.0,
   "historical_avg_daily_cost": 110.64827586206897,
-  "ml_avg_daily_waste": 33.83448275862069,
-  "ml_avg_daily_shortage": 6.724137931034483,
-  "ml_avg_daily_cost": 60.73103448275862,
-  "waste_reduction_%": 69.4215906257791,
-  "cost_reduction_%": 45.11343804537522
+  "ml_avg_daily_waste": 34.144827586206894,
+  "ml_avg_daily_shortage": 6.586206896551724,
+  "ml_avg_daily_cost": 60.48965517241379,
+  "waste_reduction_%": 69.14111194215906,
+  "cost_reduction_%": 45.33158813263526
 }
