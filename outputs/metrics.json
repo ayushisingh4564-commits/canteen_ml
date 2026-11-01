@@ -1,0 +1,40 @@
+{
+  "best_model": "LinearRegression",
+  "model_metrics": {
+    "LinearRegression": {
+      "MAE": 29.078627618473284,
+      "RMSE": 35.886500290431506,
+      "R2": 0.8224280869736023,
+      "MAPE_%": 4.404110557820414
+    },
+    "RandomForest": {
+      "MAE": 32.69281074711178,
+      "RMSE": 40.554045763192846,
+      "R2": 0.7732326981602855,
+      "MAPE_%": 5.012907341004288
+    },
+    "GradientBoosting": {
+      "MAE": 31.846961975433555,
+      "RMSE": 39.92981828402191,
+      "R2": 0.7801599944043917,
+      "MAPE_%": 4.895498596558736
+    },
+    "NaiveLastWeek": {
+      "MAE": 69.65517241379311,
+      "RMSE": 100.32416424289057,
+      "R2": -0.38778810224954663,
+      "MAPE_%": 11.404203760272372
+    }
+  },
+  "residual_std": 35.86327577121619,
+  "quantile_model": "GradientBoostingRegressor(loss='quantile')",
+  "target_quantile": 0.8,
+  "historical_avg_daily_waste": 110.64827586206897,
+  "historical_avg_daily_shortage": 0.0,
+  "historical_avg_daily_cost": 110.64827586206897,
+  "ml_avg_daily_waste": 33.83448275862069,
+  "ml_avg_daily_shortage": 6.724137931034483,
+  "ml_avg_daily_cost": 60.73103448275862,
+  "waste_reduction_%": 69.4215906257791,
+  "cost_reduction_%": 45.11343804537522
+}
