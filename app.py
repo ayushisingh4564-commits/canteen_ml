@@ -119,9 +119,8 @@ if st.button("Get recommendation", type="primary"):
     st.success(f"### Recommended quantity to prepare: **{recommended} meals**")
     st.write(f"Predicted average demand: **{predicted_demand:.0f}** meals")
     st.write(f"Recommended quantity is learned directly by a quantile regression "
-             f"model targeting the {target_quantile:.0%} percentile of demand "
-             f"(waste:shortage cost ratio {cost_waste}:{cost_shortage}).")
-
+         f"model targeting the {target_quantile:.0%} percentile of demand "
+         f"(waste to shortage cost ratio {cost_waste} to {cost_shortage}).")
 st.divider()
 st.subheader("Recent demand trend")
 st.line_chart(hist.tail(30).set_index("date")["meals_consumed"])
