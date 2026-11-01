@@ -24,13 +24,17 @@ sys.path.insert(0, os.path.join(BASE_DIR, "src"))
 st.set_page_config(page_title="Canteen Demand Forecaster", page_icon="🍽️")
 st.title("🍽️ Canteen Meal Demand & Waste Reduction")
 st.caption("ML-based forecasting to decide how much food to prepare tomorrow.")
+@st.cache_resource(show_spinner="Preparing model (first load only)...")
+def load_bundle():
+    try:
+        return joblib.load(MODEL_PATH)
+    except Exception:
+        # Pickle was saved with different library versions: retrain here
+        from train_model import main as train_main
+        train_main()
+        return joblib.load(MODEL_PATH)
 
-if not os.path.exists(MODEL_PATH):
-    st.error("No trained model found. Run `python3 main.py` first to generate data and train the model.")
-    st.stop()
-
-bundle = joblib.load(MODEL_PATH)
-model = bundle["model"]
+bundle = load_bundle()
 feature_cols = bundle["feature_cols"]
 hist = pd.read_csv(DATA_PATH, parse_dates=["date"]).sort_values("date")
 recent = hist.tail(7)
